@@ -14,6 +14,8 @@ services:
       - .:/var/www
     networks:
       - laravel_app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   nginx:
     image: nginx:alpine
